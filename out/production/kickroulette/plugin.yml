@@ -1,0 +1,23 @@
+name: KickRoulette
+version: 1.0
+author: Daniel McCloskey
+main: com.danieltmc.kickroulette.Main
+api-version: 1.13
+website: danieltmc.com
+commands:
+  kickroulette:
+    description: One in six chance. Will you get kicked?
+    aliases:
+      - kr
+    permission: kickroulette.play
+    permission-message: You don't have permission to play!
+    usage: /kickroulette
+permissions:
+  kickroulette.play:
+    description: Allows you to play by yourself
+    default: op
+  kickroulette.*:
+    description: Wildcard permission
+    default: op
+    children:
+      kickroulette.play: true
