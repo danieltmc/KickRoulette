@@ -13,7 +13,7 @@ public class KickRoulette implements CommandExecutor
 		if (sender instanceof Player)
 		{
 			Player player = (Player) sender;
-			if (System.currentTimeMillis() == 0)
+			if (System.currentTimeMillis() % 6 == 0)
 			{
 				// Kick player
 				player.kickPlayer("Not so lucky...");
